@@ -34,7 +34,6 @@ export default {
     div.jumbotron{
         background-image: url('../assets/images/home_main_slider_bg.jpg');
         background-position: center;
-        object-fit: cover;
         padding: 240px 0;
     }
 

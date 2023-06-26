@@ -1,10 +1,12 @@
 <template>
     <main>
         <Jumbotron />
+        <central/>
     </main>
 </template>
 
 <script>
+import central from "./central.vue";
 import Jumbotron from "./Jumbotron.vue";
 
 export default {
@@ -16,6 +18,7 @@ export default {
     },
     components:{
         Jumbotron,
+        central,
     }
     
 }
