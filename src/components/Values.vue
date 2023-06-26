@@ -1,8 +1,7 @@
 <template>
     <div class="lightgray-background">
         <div class="container">
-            <div class="d-flex row">
-
+            <div class="d-flex row pt-5">
                 <div class="col-6">
                     <h3 class="text-uppercase">
                         world class facilities
@@ -39,20 +38,21 @@
                     <h3 class="text-uppercase">
                         our Values
                     </h3>
-                    <div>
-                            <div class="p-2 d-flex align-items-center">
-                            <i class="fa-solid fa-plus fa-lg" style="color: #f09a3e;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"></i>
-                            <span class="text-uppercase fw-bold ms-3 fs-4">
-                                our mission
-                            </span>
-                    </div>
-                    <div class="collapse" id="collapseExample">
-                                <span class="card card-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus pariatur dignissimos aspernatur quasi officia recusandae quae consectetur minus, eum saepe quisquam ipsum, asperiores quia consequatur necessitatibus eaque nam praesentium quas!
+                    <div v-for="(value, index) in valuesList" class="value-container">
+                        <div>
+                                <div class="p-2 d-flex align-items-center">
+                                <i class="fa-solid fa-plus fa-lg" style="color: #f09a3e;" data-bs-toggle="collapse" :href="'#collapseExample' + index" role="button" aria-expanded="false"></i>
+                                <span class="text-uppercase fw-bold ms-3 fs-6 toggle-title">
+                                    {{value}}
                                 </span>
                         </div>
+                        <div class="collapse" :id="'collapseExample' + index">
+                                    <span class="card card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus pariatur dignissimos aspernatur quasi officia recusandae quae consectetur minus, eum saepe quisquam ipsum, asperiores quia consequatur necessitatibus eaque nam praesentium quas!
+                                    </span>
+                            </div>
+                        </div>
                     </div>
-                   
                 </div>
             </div>
         </div>
@@ -64,7 +64,7 @@ export default {
     name:'Values',
     data(){
         return {
-
+            valuesList:['our mission', 'our philosophy', 'our commitment', 'our promise', 'our values', ],
         }
     },
     components:{
@@ -92,5 +92,14 @@ export default {
     p,
     span.grey-text{
         color: #7e8890;
+    }
+
+    span.toggle-title{
+        color: #f09a3e;
+    }
+
+    div.value-container{
+        background-color: white;
+        margin-bottom: 1rem;
     }
 </style>
