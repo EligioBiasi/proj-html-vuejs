@@ -1,5 +1,5 @@
 <template>
-    <div class="container mt-5">
+    <div class="container my-5">
         <div class="text-center mb-5">
             <img src="../assets/images/page-logo-1.png" alt="">
             <h3 class="mt-3">Inspired By Excellence & Innovation</h3>
@@ -43,6 +43,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+    
+
     h3{
         color: #333c4e;
     }

@@ -1,13 +1,15 @@
 <template>
     <main>
         <Jumbotron />
-        <central/>
+        <central />
+        <Values />
     </main>
 </template>
 
 <script>
 import central from "./central.vue";
 import Jumbotron from "./Jumbotron.vue";
+import Values from "./Values.vue";
 
 export default {
     name:'AppMain',
@@ -19,6 +21,7 @@ export default {
     components:{
         Jumbotron,
         central,
+        Values,
     }
     
 }
