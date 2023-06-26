@@ -1,26 +1,27 @@
 <template>
-    <header>
-        <TopHeader />
-    </header>
+    <div class="orange-background">
+        
+    </div>
 </template>
 
 <script>
-import TopHeader from "./TopHeader.vue";
 
 export default {
-    name:'AppHeader',
+    name:'TopHeader',
     data(){
         return {
 
         }
     },
     components:{
-        TopHeader,
+        
     }
     
 }
 </script>
 
 <style lang="scss" scoped>
-    
+    div.orange-background{
+        background-color: #f09a3e;
+    }
 </style>
