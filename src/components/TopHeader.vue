@@ -54,6 +54,7 @@ export default {
         background-color: lightgray;
         font-size: .5rem;
         border-radius: 12%;
+        margin-left: .3rem;
     }
 
 </style>

@@ -1,11 +1,13 @@
 <template>
     <header>
         <TopHeader />
+        <BottomHeader />
     </header>
 </template>
 
 <script>
 import TopHeader from "./TopHeader.vue";
+import BottomHeader from "./BottomHeader.vue";
 
 export default {
     name:'AppHeader',
@@ -16,6 +18,7 @@ export default {
     },
     components:{
         TopHeader,
+        BottomHeader,
     }
     
 }
