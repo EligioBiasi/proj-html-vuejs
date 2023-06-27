@@ -7,6 +7,7 @@
                 <p class="mt-4">Covering topics classes to politics and student organization events.</p>
                 <div class="line"></div>
             </div>
+            
             <div class="d-flex">
                 <div class="card" v-for="img in imgList">
                     <img :src="getImagePath(img.imgRef)" class="card-img-top rounded-0" alt="#">
@@ -80,19 +81,21 @@ export default {
         font-size: 1.2rem;
         font-weight: bold;
     }
+    div.card-body{
+        h5,
+        a,
+        span.admin{
+            color: #f09a3e;
+        }
 
-    h5,
-    a,
-    span.admin{
-        color: #f09a3e;
-    }
+        a{
+            text-decoration: none;
+        }
 
-    a{
-        text-decoration: none;
+        p,
+        a{
+            font-size: .7rem;
+        }
     }
-
-    p,
-    a{
-        font-size: .7rem;
-    }
+   
 </style>
