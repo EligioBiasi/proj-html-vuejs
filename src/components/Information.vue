@@ -1,6 +1,6 @@
 <template>
     <div class="image-background">
-        <div class="d-flex justify-content-around py-5">
+        <div class="d-flex justify-content-around p-5">
             <div>
                 <div>
                     <h4 class="text-uppercase">
@@ -141,7 +141,7 @@
 
             <div>
                 <div>
-                    <h4>
+                    <h4 class="text-uppercase">
                         resources
                     </h4>
         
@@ -170,7 +170,7 @@
                 </div>
 
                 <div>
-                    <h4>
+                    <h4 class="text-uppercase">
                         quicklinks
                     </h4>
         
@@ -273,10 +273,6 @@ export default {
     a{
         text-decoration: none;
         font-weight: 600;
-    }
-
-    h4,
-    a{
         color: #333c4e;
     }
 
@@ -284,7 +280,7 @@ export default {
         width: 110px;
     }
 
-    h5{
+    h4,h5{
         color: #f09a3e;
     }
 </style>
