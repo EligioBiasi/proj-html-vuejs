@@ -4,6 +4,7 @@
         <central />
         <Values />
         <Cards />
+        <News />
     </main>
 </template>
 
@@ -12,6 +13,7 @@ import Jumbotron from "./Jumbotron.vue";
 import central from "./central.vue";
 import Values from "./Values.vue";
 import Cards from "./Cards.vue";
+import News from "./News.vue";
 
 export default {
     name:'AppMain',
@@ -25,6 +27,7 @@ export default {
         central,
         Values,
         Cards,
+        News,
     }
     
 }
