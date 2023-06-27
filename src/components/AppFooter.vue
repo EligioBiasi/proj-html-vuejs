@@ -1,10 +1,12 @@
 <template>
-    <div>
-        
-    </div>
+    <footer>
+        <Form />
+    </footer>
 </template>
 
 <script>
+import Form from "./Form.vue";
+
 export default {
     name:'AppFooter',
     data(){
@@ -13,7 +15,7 @@ export default {
         }
     },
     components:{
-        
+        Form,
     }
     
 }
