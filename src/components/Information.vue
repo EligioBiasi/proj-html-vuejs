@@ -1,24 +1,20 @@
 <template>
     <footer>
-        <Form />
-        <information />
+       
     </footer>
 </template>
 
 <script>
-import Form from "./Form.vue";
-import information from "./Information.vue";
 
 export default {
-    name:'AppFooter',
+    name:'information',
     data(){
         return {
 
         }
     },
     components:{
-        Form,
-        information,
+      
     }
     
 }
