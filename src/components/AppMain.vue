@@ -3,13 +3,15 @@
         <Jumbotron />
         <central />
         <Values />
+        <Cards />
     </main>
 </template>
 
 <script>
-import central from "./central.vue";
 import Jumbotron from "./Jumbotron.vue";
+import central from "./central.vue";
 import Values from "./Values.vue";
+import Cards from "./Cards.vue";
 
 export default {
     name:'AppMain',
@@ -22,6 +24,7 @@ export default {
         Jumbotron,
         central,
         Values,
+        Cards,
     }
     
 }

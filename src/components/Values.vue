@@ -1,7 +1,7 @@
 <template>
     <div class="lightgray-background">
         <div class="container">
-            <div class="d-flex row pt-5">
+            <div class="d-flex row py-5">
                 <div class="col-6">
                     <h3 class="text-uppercase">
                         world class facilities
