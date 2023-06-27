@@ -1,5 +1,5 @@
 <template>
-    <div class="blue-background">
+    <div class="blue-background py-5">
         <div class="container text-center">
             <div class="position-relative">
                 <h3 class="text-white">
@@ -9,13 +9,13 @@
                     <path d="M0,100 Q150,60 220,120" fill="none" stroke="#f09a3e" stroke-width="4" />
                 </svg> 
             </div>
-            <p>
+            <p class="mb-5">
                 Become Part of Avada University To Further Your Career.
             </p>
 
             <div  class="d-flex justify-content-center">
                 <input type="mail" v-for="item in FormItems" :placeholder="item" class="me-2 border-0 py-1 ps-2 saturated">
-                <button class="text-uppercase border-0 fw-bold text-white orange-button">apply now</button>
+                <button class="text-uppercase border-0 fw-semibold text-white orange-button">apply now</button>
             </div>
             
         </div>
@@ -56,11 +56,11 @@ export default {
     }
     input.saturated {
         background-color: #2c3242;
-    }
-
-    input.saturated,
-    button.orange-button{
         width: calc(100% / 4);
+
+    }
+    button.orange-button{
+        width: calc(100% / 6);
     }
     .orange-button{
         background-color: #f09a3e;
