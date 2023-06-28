@@ -42,38 +42,14 @@
                 </h4>
 
                 <ul>
-                    <li class="d-flex">
+                    <li class="d-flex" v-for="item in postList">
                         <span class="pe-2">
                             <i class="fa-solid fa-angle-right fa-xs" style="color: #a1a1a1;"></i>
                         </span>
                         <div>
-                            <a href=""> What do successful grads think you should study</a>
+                            <a href="" class="question">{{item.question}}</a>
                             <p>
-                                March 16, 2016
-                            </p>
-                        </div>
-                    </li>
-
-                    <li class="d-flex">
-                        <span  class="pe-2">
-                            <i class="fa-solid fa-angle-right fa-xs" style="color: #a1a1a1;"></i>
-                        </span>
-                        <div>
-                            <a href="">Former student discusses success in the fashion industry</a>
-                            <p>
-                                March 16, 2016
-                            </p>
-                        </div>
-                    </li>
-
-                    <li class="d-flex">
-                        <span  class="pe-2">
-                            <i class="fa-solid fa-angle-right fa-xs" style="color: #a1a1a1;"></i>
-                        </span>
-                        <div>
-                            <a href="">How do you best prepare for university</a>
-                            <p>
-                                March 15, 2016
+                                {{ item.date }}
                             </p>
                         </div>
                     </li>
@@ -82,114 +58,32 @@
         
 
             <div>
-                <div>
+                <div v-for="item in itemsLists">
                     <h4 class="text-uppercase">
-                        Courses
+                        {{item.title}}
                     </h4>
         
                     <ul>
-                        <li>
-                            Arts & Humanities
-                        </li>
-        
-                        <li>
-                            Business & Managment
-                        </li>
-        
-        
-                        <li>
-                            Engineering & Technology
-                        </li>
-        
-                        <li>
-                            Life Sciences & Medicine
-                        </li>
-        
-                        <li>
-                            Natural Sciences
+                        <li v-for="voice in item.voices">
+                            <a href="" class="text-black">{{voice}}</a>
                         </li>
                     </ul>
                 </div>
-
-                <div>
-                    <h4 class="text-uppercase">
-                        Admissions
-                    </h4>
-        
-                    <ul>
-                        <li>
-                            Eligibility
-                        </li>
-        
-                        <li>
-                            Application
-                        </li>
-        
-        
-                        <li>
-                            Review Process
-                        </li>
-        
-                        <li>
-                            How to Apply
-                        </li>
-                    </ul>
-                </div>
-
-
             </div>
 
             <div>
-                <div>
+                <div v-for="item in itemsList2">
                     <h4 class="text-uppercase">
-                        resources
+                        {{item.title}}
                     </h4>
         
                     <ul>
-                        <li>
-                            Campus Directory
-                        </li>
-        
-                        <li>
-                            Academic Calendar
-                        </li>
-        
-        
-                        <li>
-                            Sports Clubs
-                        </li>
-        
-                        <li>
-                            Graduate Programs
-                        </li>
-        
-                        <li>
-                            Faculty & Staff
+                        <li  v-for="voice in item.voices">
+                            <a href="" class="text-black">{{voice}}</a>
+                           
                         </li>
                     </ul>
                 </div>
-
-                <div>
-                    <h4 class="text-uppercase">
-                        quicklinks
-                    </h4>
-        
-                    <ul>
-                        <li>
-                            University Library
-                        </li>
-        
-                        <li>
-                            Campus Services
-                        </li>
-        
-        
-                        <li>
-                            Careers
-                        </li>
-                    </ul>
-                </div>
-
             </div>
 
             <div>
@@ -223,6 +117,21 @@ export default {
     name:'information',
     data(){
         return {
+            postList:[{
+                question:'What do successful grads think you should study',
+                date:'March 16, 2016'
+            },
+            {
+                question:'Former student discusses success in the fashion industry',
+                date:'March 15, 2016'
+            },
+            {
+                question:'How do you best prepare for university',
+                date:'March 15, 2016'
+            },
+
+            ],
+
             imgLlist:[
             {
                 img:'politics seminar',
@@ -236,7 +145,29 @@ export default {
                 img:'english seminar',
                 date: 'October 17 @ 8:00 am'
             },
-        ]
+        ],
+            itemsLists:[
+                {
+                   title:'Courses',
+                   voices:['Business & Managment','Engineering & Technology','Life Sciences & Medicine','Natural Sciences']
+                },
+                {
+                   title:'admissions',
+                   voices:['Eligibility','Application','Review Process','How to Apply']
+                },
+                
+            ],
+            itemsList2:[
+                {
+                   title:'resources',
+                   voices:['Campus Directory','Academic Calendar','Sports Clubs','Graduate Programs','Faculty & Staff']
+                },
+                {
+                   title:'quicklinks',
+                   voices:['University Library','Campus Services','Careers']
+                },
+                
+            ]
         }
     },
     components:{
@@ -272,8 +203,14 @@ export default {
 
     a{
         text-decoration: none;
+    }
+    a.question{
         font-weight: 600;
         color: #333c4e;
+    }
+
+    a.text-black{
+        color: black;
     }
 
     img{

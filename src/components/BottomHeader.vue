@@ -17,6 +17,7 @@
 </template>
 
 <script>
+
 export default {
     name:'BottomHeader',
     data(){
@@ -32,10 +33,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    div.bg-white{
-        position: fixed;
-    }
-
     ul{
         list-style-type: none;
         li{

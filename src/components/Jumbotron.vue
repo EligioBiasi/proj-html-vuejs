@@ -10,7 +10,7 @@
 
         <div class="mt-5">
             <button type="button" class="text-uppercase fw-semibold me-3 text-white orange-button">find a course</button>
-            <button type="button" class="text-uppercase fw-semibold text-white lightblue-button">apply now</button>
+            <button type="button" class="text-uppercase fw-semibold lightblue-button">apply now</button>
         </div>
     </div>
 </template>
@@ -53,6 +53,18 @@ export default {
 
     button.lightblue-button{
         background-color: #00bcd4;
+        color: white;
         
+    }
+
+    button.orange-button:hover{
+        background-color: #00bcd4;
+        transition: all 0.5s;
+    }
+
+    button.lightblue-button:hover{
+        background-color: white;
+        color: black;
+        transition: all 0.5s;
     }
 </style>

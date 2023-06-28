@@ -1,7 +1,7 @@
 <template>
     <div class="d-flex">
         <div class="card-section position-relative" v-for="img in imgList">
-            <img :src="getImagePath(img)" alt="" class="w-100 d-block">
+            <img :src="getImagePath(img)" alt="" class="d-block">
 
             <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
                 <h2>
@@ -38,14 +38,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    div.card-section{
+    div.card-section {
+        position: relative;
         width: calc(100% / 3);
-    }
-
+        overflow: hidden;
+        }
     div.line{
         width: 50px;
         background-color: goldenrod;
         height: 1px;
         margin: 0 auto;
     }
+
+    img {
+        width: 100%;
+        transition: transform 2s ease;
+        }
+
+    div.card-section:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.5);
+        }
 </style>
