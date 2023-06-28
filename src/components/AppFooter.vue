@@ -2,12 +2,14 @@
     <footer>
         <Form />
         <information />
+        <bottomFooter />
     </footer>
 </template>
 
 <script>
 import Form from "./Form.vue";
 import information from "./Information.vue";
+import bottomFooter from "./BottomFooter.vue";
 
 export default {
     name:'AppFooter',
@@ -19,6 +21,7 @@ export default {
     components:{
         Form,
         information,
+        bottomFooter,
     }
     
 }
